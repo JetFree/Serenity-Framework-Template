@@ -1,0 +1,178 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.readnaturally</groupId>
+    <version>2.0-SNAPSHOT</version>
+    <artifactId>rnl-qa-automation</artifactId>
+    <name>RNL Automation</name>
+    <packaging>pom</packaging>
+    <modules>
+        <module>rni-tests-2.0</module>
+    </modules>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <flex.plugin.version>4.0-RC2</flex.plugin.version>
+        <flex.version>3.4.0.9271</flex.version>
+        <datavisualization.version>3.5</datavisualization.version>
+
+        <!-- Framework dependency versions -->
+        <spring.version>4.2.5.RELEASE</spring.version>
+        <blazeds.version>4.7.0</blazeds.version>
+
+        <aspectj.version>1.7.2</aspectj.version>
+        <commons.beanutils.version>1.7.0</commons.beanutils.version>
+        <commons.collections.version>3.2</commons.collections.version>
+        <commons.fileupload.version>1.2.1</commons.fileupload.version>
+        <commons.io.version>1.3.2</commons.io.version>
+        <commons.lang.version>2.3</commons.lang.version>
+        <mysql.connector.version>5.1.38</mysql.connector.version>
+        <unitis.version>3.3</unitis.version>
+
+        <c3p0.version>0.9.5.2</c3p0.version>
+        <javamail.version>1.4.6</javamail.version>
+        <jstl.version>1.1.2</jstl.version>
+        <log4j.version>1.2.16</log4j.version>
+        <slf4j.version>1.6.1</slf4j.version>
+        <spring.security.version>4.0.4.RELEASE</spring.security.version>
+        <urlrewrite.version>4.0.3</urlrewrite.version>
+        <velocity.version> 1.7</velocity.version>
+        <gwt.version>2.6.1</gwt.version>
+        <gxt.version>2.3.1a-gwt22</gxt.version>
+        <hibernate.version>5.1.0.Final</hibernate.version>
+        <jackson.version>2.7.3</jackson.version>
+        <ehcache.version>2.10.0</ehcache.version>
+
+        <!-- Testing dependency versions -->
+        <jmock.version>2.4.0</jmock.version>
+        <jsp.version>2.1</jsp.version>
+        <junit.version>4.5</junit.version>
+        <servlet.version>3.1.0</servlet.version>
+        <wiser.version>1.2</wiser.version>
+
+
+        <!--<catalina.home>${env.CATALINA_HOME}</catalina.home>-->
+        <catalina.url>http://localhost:8080/manager</catalina.url>
+        <landing.url>http://localhost:3000</landing.url>
+        <web.identifier>http://localhost:8080/sm</web.identifier>
+        <mail.info>info@readnaturally.com</mail.info>
+
+        <!-- DB properties -->
+
+        <jdbc.schema>read_naturally</jdbc.schema>
+        <jdbc.user>rni</jdbc.user>
+        <jdbc.pwd>dvl</jdbc.pwd>
+
+        <jdbc.host>localhost</jdbc.host>
+        <jdbc.host.rr>localhost</jdbc.host.rr>
+
+        <jdbc.params><![CDATA[useLocalSessionState=true&useLocalTransactionState=true&elideSetAutoCommits=true&includeInnodbStatusInDeadlockExceptions=true&useSSL=false]]></jdbc.params>
+
+        <jdbc.url>jdbc:mysql://${jdbc.host}:3306/${jdbc.schema}?${jdbc.params}</jdbc.url>
+        <jdbc.url.rr>jdbc:mysql://${jdbc.host.rr}:3306/${jdbc.schema}?${jdbc.params}</jdbc.url.rr>
+
+        <test.unitils.db.dialect>mysql</test.unitils.db.dialect>
+
+        <!-- Media server -->
+
+        <media.url>http://d1mkx6g3zfshla.cloudfront.net</media.url>
+
+        <!-- Logging -->
+
+        <logging.springframework.web>ERROR</logging.springframework.web>
+        <logging.rnl.service>ERROR</logging.rnl.service>
+
+        <!-- Authentication token expiration -->
+
+        <auth.token.expiration>3600</auth.token.expiration>
+        <refresh.token.expiration>10800</refresh.token.expiration>
+
+        <!-- Other properties -->
+
+        <root.log.level>ERROR</root.log.level>
+        <selenium.log.level>OFF</selenium.log.level>
+
+        <demo.and.training.create>false</demo.and.training.create>
+        <demo.and.training.redirect>false</demo.and.training.redirect>
+
+        <media.dir>/mnt/media/</media.dir>
+
+        <db.create.skip>true</db.create.skip>
+        <content.skip>true</content.skip>
+        <content.removeNonLoadedData>false</content.removeNonLoadedData>
+
+        <gwt.user.agents><![CDATA[
+            <!-- Empty. Compiles all the permutations -->
+        ]]></gwt.user.agents>
+
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>jcl-over-slf4j</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.5.1</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+<!--
+
+    <mirrors>
+        <mirror>
+            <mirrorOf>central</mirrorOf>
+            <name>maven2cental</name>
+            <url>http://repo1.maven.org/maven2</url>
+        </mirror>
+        <mirror>
+            <mirrorOf>snapshots</mirrorOf>
+            <name>maven2snapshots</name>
+            <url>http://repo1.maven.org/maven2</url>
+        </mirror>
+
+    </mirrors>-->
+
+
+    <distributionManagement>
+        <!-- use the following if you're not using a snapshot version. -->
+        <repository>
+            <id>central</id>
+            <name>newdev-releases</name>
+            <url>http://dev2.readnaturally.com:8081/artifactory/libs-release-local</url>
+        </repository>
+
+        <!-- use the following if you ARE using a snapshot version. -->
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>newdev-snapshots</name>
+            <url>http://dev2.readnaturally.com:8081/artifactory/libs-snapshot-local</url>
+        </snapshotRepository>
+
+    </distributionManagement>
+</project>
