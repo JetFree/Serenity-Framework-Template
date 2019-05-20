@@ -11,10 +11,9 @@
 
 *.jar
 
-rni-tests-2\.0/target/
+serenity-test/target/
 
-rni-tests/target/
 *.log
 
-rni-tests-2\.0/runtime\.properties
-rni-tests-2.0/src/test/resources/applicationContextAutomation-test.xml
+serenity-test/runtime\.properties
+serenity-test/src/test/resources/applicationContextAutomation-test.xml

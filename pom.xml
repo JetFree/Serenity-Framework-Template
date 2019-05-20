@@ -9,7 +9,7 @@
     <name>RNL Automation</name>
     <packaging>pom</packaging>
     <modules>
-        <module>rni-tests-2.0</module>
+        <module>serenity-test</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
