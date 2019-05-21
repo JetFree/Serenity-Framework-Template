@@ -119,6 +119,10 @@ public class DbExecutor {
         }
     }
 
+    /**
+     * Enum for different dbs
+     * Add here name of your db and property in serenity.properties
+     */
     public enum DB {
         READ_NATURALLY("db.qa.url"),
         READ_NATURALLY_REPORT("db.qa.report.url");
