@@ -124,8 +124,8 @@ public class DbExecutor {
      * Add here name of your db and property in serenity.properties
      */
     public enum DB {
-        READ_NATURALLY("db.qa.url"),
-        READ_NATURALLY_REPORT("db.qa.report.url");
+        DATABASE("db.qa.url"),
+        ANOTHER_DB("db.qa.report.url");
 
         private String propertyName;
 

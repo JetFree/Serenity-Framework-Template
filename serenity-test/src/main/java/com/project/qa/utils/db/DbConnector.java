@@ -10,22 +10,22 @@ import java.sql.SQLException;
 
 public class DbConnector {
 
-    static PropertiesLoader propertiesLoader = new PropertiesLoader();
+    private static PropertiesLoader propertiesLoader = new PropertiesLoader();
     private Connection connectionReadNaturally = null;
     private Connection connectionReadNaturallyReport = null;
     private static Logger LOGGER = LoggerFactory.getLogger(DbExecutor.class);
-    private static Object monitor = new Object();
+    private final static Object monitor = new Object();
     private static final String USER = propertiesLoader.getProperty("db.login");
     private static final String PASS = propertiesLoader.getProperty("db.pass");
 
-    public DbConnector() {
+    protected DbConnector() {
     }
 
     public DbExecutor to(DbExecutor.DB dbToConnect) {
         synchronized (monitor) {
             Connection currentConnection = null;
             switch (dbToConnect) {
-                case READ_NATURALLY:
+                case DATABASE:
                     if (isConnectionAlive(connectionReadNaturally)) {
                         currentConnection = connectionReadNaturally;
                     } else {
@@ -33,7 +33,7 @@ public class DbConnector {
                         connectionReadNaturally = currentConnection;
                     }
                     break;
-                case READ_NATURALLY_REPORT:
+                case ANOTHER_DB:
                     if (isConnectionAlive(connectionReadNaturallyReport)) {
                         currentConnection = connectionReadNaturallyReport;
                     } else {
@@ -49,7 +49,7 @@ public class DbConnector {
     private boolean isConnectionAlive(Connection connection) {
         boolean result = false;
         try {
-            result = (connection == null || connection.isClosed()) ? false : true;
+            result = connection != null && !connection.isClosed();
         } catch (SQLException e) {
             e.printStackTrace();
         }

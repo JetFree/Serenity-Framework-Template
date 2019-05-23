@@ -20,14 +20,14 @@ import static com.project.qa.utils.db.DbExecutor.connect;
 @RunWith(SerenityRunner.class)
 public class SimpleTestTemplate {
 
-    @Managed(uniqueSession = false)
+    @Managed()
     public WebDriver driver;
 
     @ManagedPages
     public Pages pages;
 
     @Steps
-    public GuestUserSteps guest;
+    protected GuestUserSteps guest;
 
     @Steps
     public static StaffApiSteps staffApi;
@@ -35,6 +35,6 @@ public class SimpleTestTemplate {
 
     @AfterClass
     public static void closeDbConnection() {
-        connect().to(DbExecutor.DB.READ_NATURALLY).closeConnection();
+        connect().to(DbExecutor.DB.DATABASE).closeConnection();
     }
 }

@@ -19,7 +19,7 @@ public class SqlRequestSender {
 
     public static String getSomeResult() {
         String request = "Some SQL request";
-        Map<String, List<String>> results = connect().to(DbExecutor.DB.READ_NATURALLY)
+        Map<String, List<String>> results = connect().to(DbExecutor.DB.DATABASE)
                 .getValuesFromResultSet(request, "columnName");
         return (results.size() > 0) ? results.get("columnName").get(0) : null;
     }
