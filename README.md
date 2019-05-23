@@ -20,10 +20,10 @@ Framework contains some examples of customizing some parts:
     > (In case if you need to listen and process some actions before/after every selenium action)
         
 2. Implementation your own elements in serenity can be found here:
-    - `com.project.qa.controls`
+    - [`com.project.qa.controls`](https://github.com/JetFree/Serenity-Framework-Template/tree/master/serenity-test/src/main/java/com/project/qa/controls)
 3. Integration with TeamCity:
-    - `com.project.qa.teamcity` (Classes to interact with TeamCity)
-    - `com.project.qa.teamcity.suites` (Test suites to run)
+    - [`com.project.qa.teamcity`](https://github.com/JetFree/Serenity-Framework-Template/tree/master/serenity-test/src/main/java/com/project/qa/teamcity) (Classes to interact with TeamCity)
+    - [`com.project.qa.teamcity.suites`](https://github.com/JetFree/Serenity-Framework-Template/tree/master/serenity-test/src/test/java/com/project/qa/teamcity/suites) (Test suites to run)
         
 ##Installing
 
