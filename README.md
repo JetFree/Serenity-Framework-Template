@@ -2,7 +2,7 @@
 
 It's a [Serenity framework](http://thucydides.info/docs/serenity-staging/) with some additional utility classes.
 
-##Additions
+## Additions
 
 - [Drag and drop](https://github.com/JetFree/Serenity-Framework-Template/blob/master/serenity-test/src/main/java/com/project/qa/utils/DragAndDropHTML5Helper.java)
 - [Utility methods for selenium driver](https://github.com/JetFree/Serenity-Framework-Template/blob/master/serenity-test/src/main/java/com/project/qa/utils/DriverUtils.java)
@@ -11,7 +11,7 @@ It's a [Serenity framework](http://thucydides.info/docs/serenity-staging/) with 
 - [Some randomizer to generate random values](https://github.com/JetFree/Serenity-Framework-Template/blob/master/serenity-test/src/main/java/com/project/qa/utils/Randomizer.java)
 
 
-##Customization
+## Customization
 Framework contains some examples of customizing some parts:
     
 1. Implementation of Event Listener and custom driver can be found here:
@@ -25,7 +25,7 @@ Framework contains some examples of customizing some parts:
     - [`com.project.qa.teamcity`](https://github.com/JetFree/Serenity-Framework-Template/tree/master/serenity-test/src/main/java/com/project/qa/teamcity) (Classes to interact with TeamCity)
     - [`com.project.qa.teamcity.suites`](https://github.com/JetFree/Serenity-Framework-Template/tree/master/serenity-test/src/test/java/com/project/qa/teamcity/suites) (Test suites to run)
         
-##Installing
+## Installing
 
 1. To get it work need to install [Maven](https://maven.apache.org/)
 2. For UI test need to install driver you need (f.e. [ChromeDriver](http://chromedriver.chromium.org/))
