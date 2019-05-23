@@ -4,11 +4,11 @@ It's a [Serenity framework](http://thucydides.info/docs/serenity-staging/) with 
 
 ##Additions
 
-- [Drag and drop]()
-- [Utility methods for selenium driver]()
-- [Tool to work with emails messages: Get, Search, Read]()
-- [Tool to work with Local storage in browser]()
-- [Some randomizer to generate random values]()
+- [Drag and drop](https://github.com/JetFree/Serenity-Framework-Template/blob/master/serenity-test/src/main/java/com/project/qa/utils/DragAndDropHTML5Helper.java)
+- [Utility methods for selenium driver](https://github.com/JetFree/Serenity-Framework-Template/blob/master/serenity-test/src/main/java/com/project/qa/utils/DriverUtils.java)
+- [Tool to work with emails messages: Get, Search, Read](https://github.com/JetFree/Serenity-Framework-Template/blob/master/serenity-test/src/main/java/com/project/qa/utils/EmailExecutor.java)
+- [Tool to work with Local storage in browser](https://github.com/JetFree/Serenity-Framework-Template/blob/master/serenity-test/src/main/java/com/project/qa/utils/LocalStorage.java)
+- [Some randomizer to generate random values](https://github.com/JetFree/Serenity-Framework-Template/blob/master/serenity-test/src/main/java/com/project/qa/utils/Randomizer.java)
 
 
 ##Customization
