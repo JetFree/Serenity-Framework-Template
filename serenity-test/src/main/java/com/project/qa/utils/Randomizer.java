@@ -11,10 +11,10 @@ import java.util.Random;
 /**
  * Created by Evgeny.Gurinovich on 09.06.2016.
  */
-public class RniRandomizer {
+public class Randomizer {
     private static final int STR_LENGTH = 6;
     private static final String ALPHABET = "qwertyuiopasdfghjklzxcvbnmQWERYUIOPASDFGHJLZXCVBNM1234567890";
-    private static Logger LOGGER = LoggerFactory.getLogger(RniRandomizer.class);
+    private static Logger LOGGER = LoggerFactory.getLogger(Randomizer.class);
 
     public static String getRandomSequence(){
         String result = "";

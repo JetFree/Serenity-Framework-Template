@@ -13,7 +13,7 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 /**
  * Created by JetFree on 10.01.18.
  */
-public class RniCustomDriverFactory implements DriverSource {
+public class CustomDriverFactory implements DriverSource {
     private PropertiesLoader propertiesLoader = new PropertiesLoader();
 
     @Override
