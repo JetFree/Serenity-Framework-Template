@@ -18,7 +18,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <properties.plugin.version>1.0.0</properties.plugin.version>
         <filesave.plugin.verson>2.19</filesave.plugin.verson>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <serenity.version>1.9.45</serenity.version>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <mysql.connector.version>5.1.38</mysql.connector.version>
